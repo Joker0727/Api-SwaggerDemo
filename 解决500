@@ -1,0 +1,10 @@
+在做Web API的文档自动生成时，本机调试都正常，发布到服务器上出现500错误
+
+
+
+500 : { "Message": "An error has occurred." } /api/swagger/docs/v1
+
+原因是开发模式为Debug配置环境，发布服务器后在release模式下没找到对应的document xml配置文件
+
+解决办法，在项目配置document的xml除了debug模式之外，在release也需要配置，如下图configuration选择配置环境
+
